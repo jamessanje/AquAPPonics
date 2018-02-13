@@ -21,19 +21,20 @@ import { GlobalVarsProvider } from '../providers/global-vars/global-vars';
 
 
 export const firebaseConfig = {
- /* apiKey: "AIzaSyDSMrX2C715GsFpEC06emJ8LT1fGi0mil0",
+  apiKey: "AIzaSyDSMrX2C715GsFpEC06emJ8LT1fGi0mil0",
   authDomain: "hvccareeee.firebaseapp.com",
   databaseURL: "https://hvccareeee.firebaseio.com",
   projectId: "hvccareeee",
   storageBucket: "hvccareeee.appspot.com",
   messagingSenderId: "179047373339"
-  */
-    apiKey: "AIzaSyCfOVS4fKzugZEv2o26Ir8rjkH2XwayfJo",
+  
+  /*  apiKey: "AIzaSyCfOVS4fKzugZEv2o26Ir8rjkH2XwayfJo",
     authDomain: "hvccare-5b4bc.firebaseapp.com",
     databaseURL: "https://hvccare-5b4bc.firebaseio.com",
     projectId: "hvccare-5b4bc",
     storageBucket: "hvccare-5b4bc.appspot.com",
     messagingSenderId: "706149028538"
+  */
 };
 
 @NgModule({

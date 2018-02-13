@@ -12,7 +12,7 @@
 <ion-list>
 <ion-card class="monitor">
   <ion-card-header  class="monitorBG">
-    <h1 class="card-title">Crops Being<br> Monitored</h1>
+    <h1 class="card-title">Crops and Fishes Being<br> Monitored</h1>
   </ion-card-header >
   <ion-card-content class="monitorBG"> 
     <ion-grid>
@@ -40,6 +40,15 @@
         </ion-col>
         <ion-col col-auto>
           <ion-label>{{cropName3}}</ion-label>
+        </ion-col>
+      </ion-row>
+	  
+	  <ion-row>
+        <ion-col col-7>
+          <ion-label>Fishes: </ion-label>
+        </ion-col>
+        <ion-col col-auto>
+          <ion-label>{{fishName}}</ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>

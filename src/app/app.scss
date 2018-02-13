@@ -1,22 +1,13 @@
-$SIDEMENU_TOP: #ee4649;
-$SIDEMENU_BOTTOM: #f6a72a;
-$SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
 
 .toolbar-background-md {
-    //background: -webkit-gradient(left top, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    //background: -o-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    //background: -moz-linear-gradient(bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
-    background: linear-gradient(to bottom right, $SIDEMENU_TOP, $SIDEMENU_BOTTOM);
+    
+    background-color: #87CEEB;
     background-repeat: repeat-x;
 }
 
 
 .Sibol{
-    //background-image: url('../assets/imgs/HVC.png');
-   // background-repeat: no-repeat;
-    //background-position-x: 10%;
-    //background-position-y: 100%;
-   // background-size: 22%;
+   
     margin-bottom: 2%;
     margin-top: -13%;
     text-align: center;
@@ -27,8 +18,6 @@ $SIDEMENU_TRANSPARENCY: rgba(255,255,255,0.4);
 
 .center{
     background-repeat: no-repeat;
-   // background-position-x: 10%;
-    //background-position-y: 100%;
     background-size: 20%;
     background-position: center;
 }

@@ -32,14 +32,13 @@ page-monitor {
 ion-card.monitor {
     position: relative;
     text-align: center;
-    //background: #44B3C2;
-    background: linear-gradient(to bottom right,  #17EAD8, #6078EA);
+    background: linear-gradient(to bottom right,  #00B8DD, #00DD6E);
 
 }
 ion-card.temperature {
     position: relative;
     text-align: center;
-    //background: #44B3C2;
+    
     background: linear-gradient(to bottom right,  #F64848, #FFB158);
 }
 ion-card.humidity {
@@ -111,7 +110,7 @@ ion-label.measuredPh{
     font-size: 5em;
     //<img src="assets/imgs/temp.png"/>
     background-image: url('../assets/imgs/Ph.png');
-    background-position-x: 120%;
+    background-position-x: 100%;
     background-size: contain;
     background-repeat: no-repeat;
     margin-top: 0%;
@@ -209,12 +208,12 @@ ion-card-content.ph{
 
 .phUpToggle{
     margin-left: 47%;
-    margin-top: -12%;
+    margin-top: -18%;
 }
 
 .phDownToggle{
     margin-left: 77%;
-    margin-top: -9.5%;
+    margin-top: -11%;
 }
 
 $colors: (

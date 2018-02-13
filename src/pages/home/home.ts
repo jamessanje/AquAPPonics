@@ -22,6 +22,9 @@ export class HomePage {
   crop2 = ""
   crop3 = ""
   buttonDisabled = true;
+  buttonDisabled2 = true;
+  
+  fish = ""
   
   
 
@@ -32,6 +35,8 @@ export class HomePage {
     this.crop1 = "";
     this.crop2 = "";
     this.crop3 = "";
+	
+	this.fish = "";
 
     /*this.afd.list('Realtime_Data', ref => ref.limitToLast(12)).snapshotChanges().map(actions =>{
       this.timeStamp = [];
@@ -174,6 +179,49 @@ export class HomePage {
     });
     confirmed.present()
   }
+  
+  
+  
+  doConfirm2() {
+    let confirm2 = this.alertCtrl.create({
+      title: 'Are you sure?',
+      message: 'Are you sure you want to select these fishes?',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+            console.log('No clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            //console.log('Agree clicked');
+            this.update2();
+            this.Confirmed2();
+          }
+        }
+      ]
+    });
+    confirm2.present()
+  }
+
+  Confirmed2() {
+    let confirmed2 = this.alertCtrl.create({
+      title: '',
+      message: 'The fishes have been selected!',
+      buttons: [
+        {
+          text: 'Done',
+          handler: () => {
+            console.log('Done clicked');
+            
+          }
+        }
+      ]
+    });
+    confirmed2.present()
+  }
 
   /*check(){
     if(this.crop1 != '' || this.crop2 != '' || this.crop3 != ''){
@@ -207,6 +255,13 @@ export class HomePage {
       this.buttonDisabled = null;
     }
   }
+  changeFish(value){
+    console.log(this.fish);
+    this.fish = value.toString();
+    if(this.fish != ""){
+      this.buttonDisabled2 = null;
+    }
+  }
   
   update(){
     console.log(this.crop1);
@@ -214,6 +269,13 @@ export class HomePage {
     this.firebaseDb.list("/Crop_Data/Crop_Name/").push(this.crop1.toString());
     this.firebaseDb.list("/Crop_Data/Crop_Name/").push(this.crop2.toString());
     this.firebaseDb.list("/Crop_Data/Crop_Name/").push(this.crop3.toString());
+  }
+  
+  update2(){
+    console.log(this.fish);
+    this.firebaseDb.list("/Fish_Data/Fish_Name/").remove();
+    this.firebaseDb.list("/Fish_Data/Fish_Name/").push(this.fish.toString());
+    
   }
 
   ionViewDidLoad() {

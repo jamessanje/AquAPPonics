@@ -29,6 +29,7 @@ export class MonitorPage {
   cropName1 = ""
   cropName2 = ""
   cropName3 = ""
+  fishName = ""
 
   Cooler_Status = ""
   phDown_Status = ""
@@ -60,12 +61,13 @@ export class MonitorPage {
   arrData: any;
   arrName: any;
   arrStatus: any;
+  arrFish: any;
 
  
   constructor(public navCtrl: NavController, public firebaseDb: AngularFireDatabase){
-    this.Toggle = true;
-    this.TogglePhUp = true;
-    this.TogglePhDown = false;
+    //this.temp_Statusbtn = true;
+    //this.phUp_Statusbtn = true;
+    //this.phDown_Statusbtn = false;
 
     this.firebaseDb.list('/Sensor_Data').valueChanges().subscribe(snapshots=>{
     this.arrData = snapshots;
@@ -96,8 +98,15 @@ export class MonitorPage {
       this.cropName2 = this.arrName[1];
       this.cropName3 = this.arrName[2];
 
-  
     });
+	
+	this.firebaseDb.list('/Fish_Data/Fish_Name').valueChanges().subscribe(snapshots=>{
+      this.arrFish = snapshots;
+      this.fishName = this.arrFish[0];
+      
+
+    });
+	
 
 
 

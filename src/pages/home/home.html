@@ -14,7 +14,7 @@
 
 <ion-content padding class="bg">
   <ion-title class="logo">
-  <br><br><br><br>
+  <br><br><br><br><br>
   </ion-title>
   <h4 class="center">Crops To Be Monitored</h4>
   <ion-list>
@@ -75,11 +75,30 @@
       </ion-select>
   </ion-item>
   </ion-list>
-
   <button class="right"  ion-button (click)="doConfirm()" disabled={{buttonDisabled}}>
     <ion-icon name='checkmark'></ion-icon>
     Done
   </button>
+  
+  
+  <h4 class="center">Fishes To Be Monitored</h4>
+  <ion-list>
+  <ion-item>
+	<ion-label>Select Fishes</ion-label>
+		<ion-select [(ngModel)]="fish" (ionChange)="changeFish(fish)">
+        <ion-option>Bangus</ion-option>
+        <ion-option>Tilapia</ion-option>
+        <ion-option>Bisugo</ion-option>
+        <ion-option>Hito</ion-option>
+		</ion-select>
+  </ion-item>
+  </ion-list>
+  <button class="right"  ion-button (click)="doConfirm2()" disabled={{buttonDisabled2}}>
+    <ion-icon name='checkmark'></ion-icon>
+    Done
+  </button>
+
+  
   <br>
   <br>
   <br>
