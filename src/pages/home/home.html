@@ -23,16 +23,24 @@
     <ion-select [(ngModel)]="crop1" (ionChange)="change(crop1)">
       <ion-option>Strawberry</ion-option>
       <ion-option>Lettuce</ion-option>
+	  <ion-option>Asparagus</ion-option>
       <ion-option>Basil</ion-option>
       <ion-option>Beans and Peas</ion-option>
       <ion-option>Brocolli</ion-option>
       <ion-option>Cabbage</ion-option>
       <ion-option>Cauliflower</ion-option>
+	  <ion-option>Celery</ion-option>
       <ion-option>Cucumber</ion-option>
       <ion-option>Eggplant</ion-option>
       <ion-option>Mangold</ion-option>
+	  <ion-option>Mint</ion-option>
+	  <ion-option>Mustard</ion-option>
+	  <ion-option>Okra</ion-option>
       <ion-option>Parsley</ion-option>
+	  <ion-option>Pechay</ion-option>
       <ion-option>Peppers</ion-option>
+	  <ion-option>Spinach</ion-option>
+	  <ion-option>Sweet Corn</ion-option>
       <ion-option>Tomato</ion-option>
     </ion-select>
   </ion-item>
@@ -41,37 +49,53 @@
     <ion-label>Crop 2</ion-label>
       <ion-select [(ngModel)]="crop2" (ionChange)="change2(crop2)">
         <ion-option>Strawberry</ion-option>
-        <ion-option>Lettuce</ion-option>
-        <ion-option>Basil</ion-option>
-        <ion-option>Beans and Peas</ion-option>
-        <ion-option>Brocolli</ion-option>
-        <ion-option>Cabbage</ion-option>
-        <ion-option>Cauliflower</ion-option>
-        <ion-option>Cucumber</ion-option>
-        <ion-option>Eggplant</ion-option>
-        <ion-option>Mangold</ion-option>
-        <ion-option>Parsley</ion-option>
-        <ion-option>Peppers</ion-option>
-        <ion-option>Tomato</ion-option>
+      <ion-option>Lettuce</ion-option>
+	  <ion-option>Asparagus</ion-option>
+      <ion-option>Basil</ion-option>
+      <ion-option>Beans and Peas</ion-option>
+      <ion-option>Brocolli</ion-option>
+      <ion-option>Cabbage</ion-option>
+      <ion-option>Cauliflower</ion-option>
+	  <ion-option>Celery</ion-option>
+      <ion-option>Cucumber</ion-option>
+      <ion-option>Eggplant</ion-option>
+      <ion-option>Mangold</ion-option>
+	  <ion-option>Mint</ion-option>
+	  <ion-option>Mustard</ion-option>
+	  <ion-option>Okra</ion-option>
+      <ion-option>Parsley</ion-option>
+	  <ion-option>Pechay</ion-option>
+      <ion-option>Peppers</ion-option>
+	  <ion-option>Spinach</ion-option>
+	  <ion-option>Sweet Corn</ion-option>
+      <ion-option>Tomato</ion-option>
       </ion-select>
   </ion-item>
  
   <ion-item>
     <ion-label>Crop 3</ion-label>
       <ion-select [(ngModel)]="crop3" (ionChange)="change3(crop3)">
-        <ion-option>Strawberry</ion-option>
-        <ion-option>Lettuce</ion-option>
-        <ion-option>Basil</ion-option>
-        <ion-option>Beans and Peas</ion-option>
-        <ion-option>Brocolli</ion-option>
-        <ion-option>Cabbage</ion-option>
-        <ion-option>Cauliflower</ion-option>
-        <ion-option>Cucumber</ion-option>
-        <ion-option>Eggplant</ion-option>
-        <ion-option>Mangold</ion-option>
-        <ion-option>Parsley</ion-option>
-        <ion-option>Peppers</ion-option>
-        <ion-option>Tomato</ion-option>
+       <ion-option>Strawberry</ion-option>
+      <ion-option>Lettuce</ion-option>
+	  <ion-option>Asparagus</ion-option>
+      <ion-option>Basil</ion-option>
+      <ion-option>Beans and Peas</ion-option>
+      <ion-option>Brocolli</ion-option>
+      <ion-option>Cabbage</ion-option>
+      <ion-option>Cauliflower</ion-option>
+	  <ion-option>Celery</ion-option>
+      <ion-option>Cucumber</ion-option>
+      <ion-option>Eggplant</ion-option>
+      <ion-option>Mangold</ion-option>
+	  <ion-option>Mint</ion-option>
+	  <ion-option>Mustard</ion-option>
+	  <ion-option>Okra</ion-option>
+      <ion-option>Parsley</ion-option>
+	  <ion-option>Pechay</ion-option>
+      <ion-option>Peppers</ion-option>
+	  <ion-option>Spinach</ion-option>
+	  <ion-option>Sweet Corn</ion-option>
+      <ion-option>Tomato</ion-option>
       </ion-select>
   </ion-item>
   </ion-list>
@@ -81,15 +105,36 @@
   </button>
   
   
-  <h4 class="center">Fishes To Be Monitored</h4>
+  <h4 class="center">Fish To Be Monitored</h4>
   <ion-list>
   <ion-item>
-	<ion-label>Select Fishes</ion-label>
+	<ion-label>Select Fish</ion-label>
 		<ion-select [(ngModel)]="fish" (ionChange)="changeFish(fish)">
-        <ion-option>Bangus</ion-option>
+        <ion-option>Milkfish "Bangus"</ion-option>
         <ion-option>Tilapia</ion-option>
-        <ion-option>Bisugo</ion-option>
-        <ion-option>Hito</ion-option>
+        <ion-option>Threadfin bream "Bisugo"</ion-option>
+        <ion-option>Catfish "Hito"</ion-option>
+		</ion-select>
+  </ion-item>
+  
+  <ion-item>
+	<ion-label>Number of Fishes</ion-label>
+		<ion-select [(ngModel)]="NumberOfFish" (ionChange)="changeNumberOfFish(fish)">
+        <ion-option>1-10</ion-option>
+        <ion-option>11-20</ion-option>
+        <ion-option>21-30</ion-option>
+		</ion-select>
+  </ion-item>
+  
+  <ion-item>
+	<ion-label>Age of Fish</ion-label>
+		<ion-select [(ngModel)]="AgeOfFish" (ionChange)="changeAgeOfFish(fish)">
+        <ion-option>1 Week Old</ion-option>
+        <ion-option>2 Weeks Old</ion-option>
+        <ion-option>3 Weeks Old</ion-option>
+		<ion-option>1 Month Old</ion-option>
+		<ion-option>1 and 1/2 Months Old</ion-option>
+		<ion-option>2 Months Old</ion-option>
 		</ion-select>
   </ion-item>
   </ion-list>

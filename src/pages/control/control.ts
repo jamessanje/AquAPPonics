@@ -38,18 +38,25 @@ export class ControlPage {
   highest_temperature = ""
   lowest_temperature = ""
 
-  Toggle: boolean;
+  ToggleCooler: boolean;
+  ToggleGrowLight: boolean;
   TogglePhUp: boolean;
   TogglePhDown: boolean;
+  ToggleWaterPump: boolean;
+  ToggleFishFeeder: boolean;
 
   arrData: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public firebaseDb: AngularFireDatabase, public alertCtrl: AlertController) {
     this.setTemperature = "";
     this.setAcidity = "";
-    this.Toggle = true;
-    this.TogglePhUp = true;
+    this.ToggleCooler = true;
+	this.ToggleGrowLight = false;
+    this.TogglePhUp = false;
     this.TogglePhDown = false;
+	this.ToggleWaterPump = false;
+	this.ToggleFishFeeder = false;
+	
 
     
     this.firebaseDb.list('/Sensor_Data').valueChanges().subscribe(snapshots=>{
@@ -88,7 +95,7 @@ export class ControlPage {
   }
 
   notify(){
-    console.log("Toggled: "+ this.Toggle);
+    console.log("Toggled: "+ this.ToggleCooler);
   }
 
   setTempUp(){

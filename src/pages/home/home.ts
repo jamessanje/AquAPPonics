@@ -25,6 +25,8 @@ export class HomePage {
   buttonDisabled2 = true;
   
   fish = ""
+  NumberOfFish = ""
+  AgeOfFish = ""
   
   
 
@@ -37,6 +39,7 @@ export class HomePage {
     this.crop3 = "";
 	
 	this.fish = "";
+	this.NumberOfFish
 
     /*this.afd.list('Realtime_Data', ref => ref.limitToLast(12)).snapshotChanges().map(actions =>{
       this.timeStamp = [];
@@ -258,9 +261,25 @@ export class HomePage {
   changeFish(value){
     console.log(this.fish);
     this.fish = value.toString();
-    if(this.fish != ""){
+    if(this.fish != "" || this.NumberOfFish != "" || this.AgeOfFish != ""){
       this.buttonDisabled2 = null;
     }
+  }
+  
+  changeNumberOfFish(value){
+	console.log(this.NumberOfFish);
+	this.NumberOfFish = value.toString();
+	if(this.fish != "" || this.NumberOfFish != "" || this.AgeOfFish != ""){
+       this.buttonDisabled2 = null;
+	}
+  }
+  
+  changeAgeOfFish(value){
+	console.log(this.NumberOfFish);
+	this.AgeOfFish = value.toString();
+	if(this.fish != "" || this.NumberOfFish != "" || this.AgeOfFish != ""){
+       this.buttonDisabled2 = null;
+	}
   }
   
   update(){

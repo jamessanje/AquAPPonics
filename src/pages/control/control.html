@@ -74,27 +74,32 @@
     </ion-label>
       <ion-item>
         <ion-label>Cooler</ion-label>
-        <ion-toggle [(ngModel)]="Toggle" (ionChange)="notify()"></ion-toggle>
+        <ion-toggle [(ngModel)]="ToggleCooler" (ionChange)="notify()"></ion-toggle>
       </ion-item>
     
       <ion-item>
         <ion-label>Grow Light</ion-label>
-        <ion-toggle ></ion-toggle>
+        <ion-toggle [(ngModel)]="ToggleGrowLight" (ionChange)="notify()"></ion-toggle>
       </ion-item>
 
       <ion-item>
         <ion-label>pH Up</ion-label>
-        <ion-toggle ></ion-toggle>
+        <ion-toggle [(ngModel)]="TogglePhUp" (ionChange)="notify()"></ion-toggle>
       </ion-item>
 
       <ion-item>
         <ion-label>pH Down</ion-label>
-        <ion-toggle ></ion-toggle>
+        <ion-toggle [(ngModel)]="TogglePhDown" (ionChange)="notify()"></ion-toggle>
       </ion-item>
 
       <ion-item>
         <ion-label>Water Pump</ion-label>
-        <ion-toggle ></ion-toggle>
+        <ion-toggle [(ngModel)]="ToggleWaterPump" (ionChange)="notify()"></ion-toggle>
+      </ion-item>
+	  
+	  <ion-item>
+        <ion-label>Fish Feeder</ion-label>
+        <ion-toggle [(ngModel)]="ToggleFishFeeder" (ionChange)="notify()"></ion-toggle>
       </ion-item>
 
   </ion-list>
